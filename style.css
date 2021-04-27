@@ -44,3 +44,22 @@ img {
 #header{
     height: 80px;
 }
+
+#slideshow {
+    height: 70%;
+}
+
+.card-header>img {
+    width: 100% ;
+    height: 250px;
+}
+
+.buyBtn {
+    width: 80px;
+    height: 50px;
+    background-color: #da0a0a;
+    color: #fff;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+}
