@@ -19,13 +19,16 @@
 
 <body>
     <nav>
+        <img src="img/logo.png" alt="logo" id="logo">
         <ul>
-            <li>
-                <img src="img/logo.png" alt="logo">
-            </li>
             <li>
                 <a id="signUp">
                     SIGN UP
+                </a>
+            </li>
+            <li id="user">
+                <a id="usersName">
+                    
                 </a>
             </li>
         </ul>
@@ -36,9 +39,9 @@
         <div class="modal-content">
             <header>
                 <h3>Register</h3>
-                <button id="closeBtn">x</button>
+                <button class="closeBtn" id="closeBtn1">x</button>
             </header>
-            <form class="text-center">
+            <form class="text-center" id="registerForm">
                 <p class="label">Full name<p>
                 <input type="text" name="fullName" id="fullName" class="inputs" placeholder="Full Name" title="Full Name" required>
                 <br>
@@ -51,8 +54,42 @@
                 <input type="password" name="password" id="password" class="inputs" placeholder="Password" title="Password" required>
                 <br>
                 <br>
-                <button type="submit" class="formBtn">Register</button>
+                <button type="submit" class="formBtn" id="register">Register</button>
+                <button type="button" class="formBtn" id="signIn" onclick="logIn()">Sign In</button>
+                <p id="registerMessage"></p>
             </form>
+        </div>
+    </div>
+
+    <div class="modal" id="modal2">
+        <div class="modal-content">
+            <header>
+                <h3>Sign In</h3>
+                <button class="closeBtn" id="closeBtn2">x</button>
+            </header>
+            <form class="text-center" id="signInForm">
+                <p class="label"> Email</p>
+                <input type="email" name="emailInput" id="emailInput" class="inputs" placeholder="E-mail" title="E-mail" required>
+                <br>
+                <br>
+                <p class="label">password</p>
+                <input type="password" name="passwordInput" id="passwordInput" class="inputs" placeholder="Password" title="Password" required>
+                <br>
+                <br>
+                <button type="submit" class="formBtn" id="signInBtn">Sign In</button>
+                <p id="signInMessage"></p>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal" id="modal3">
+        <div class="modal-content">
+            <header>
+                <h3>Set location</h3>
+                <button class="closeBtn" id=closeBtn3>x</button>
+            </header>
+            <div class="map-cont" id="map"></div>
+            <button class="btn-secondary border-white pl-5 pr-5 text-white" id="setLocation">Set Location</button>
         </div>
     </div>
 
@@ -123,9 +160,65 @@
         <h1>RECOMMENDED FOR YOU</h1>
         <div class="d-flex justify-content-between">
             <div class="flex-fill m-4" style="height: 450px;">
-                <!-- <div class="card p-4">
-                    <img src="img/item.jpg" class="w-75" style="height: 150px;">
-                </div> -->
+                <div class="card text-center border-dark" style="width: 100%; height: 430px;">
+                    <div class="card-header p-0 m-0">
+                        <img src="img/item.jpg">
+                    </div>
+                    <h5 style="width: 100%; text-align: center;">ultimate savings bucket</h5>
+                    <div class="card-body d-flex justify-content-between">
+                        <p>
+                            $20
+                        </p>
+                        <button class="buyBtn">Buy</button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-fill m-4" style="height: 400px;">
+                <div class="card text-center border-dark" style="width: 100%; height: 430px;">
+                    <div class="card-header p-0 m-0">
+                        <img src="img/item.jpg">
+                    </div>
+                    <h5 style="width: 100%; text-align: center;">ultimate savings bucket</h5>
+                    <div class="card-body d-flex justify-content-between">
+                        <p>
+                            $20
+                        </p>
+                        <button class="buyBtn">Buy</button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-fill m-4" style="height: 400px;">
+                <div class="card text-center border-dark" style="width: 100%; height: 430px;">
+                    <div class="card-header p-0 m-0">
+                        <img src="img/item.jpg">
+                    </div>
+                    <h5 style="width: 100%; text-align: center;">ultimate savings bucket</h5>
+                    <div class="card-body d-flex justify-content-between">
+                        <p>
+                            $20
+                        </p>
+                        <button class="buyBtn">Buy</button>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-fill m-4" style="height: 400px;">
+                <div class="card text-center border-dark" style="width: 100%; height: 430px;">
+                    <div class="card-header p-0 m-0">
+                        <img src="img/item.jpg">
+                    </div>
+                    <h5 style="width: 100%; text-align: center;">ultimate savings bucket</h5>
+                    <div class="card-body d-flex justify-content-between">
+                        <p>
+                            $20
+                        </p>
+                        <button class="buyBtn">Buy</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="d-flex justify-content-between">
+            <div class="flex-fill m-4" style="height: 450px;">
                 <div class="card text-center border-dark" style="width: 100%; height: 430px;">
                     <div class="card-header p-0 m-0">
                         <img src="img/item.jpg">
