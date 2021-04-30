@@ -48,10 +48,10 @@ registerForm.addEventListener('submit', (e) => {
         flag = false;
         message.innerHTML = "User registered successfully"
         message.setAttribute('class', 'text-success')
-        setInterval(() => {
-            modal.style.display = 'none'
-            message.style.display = 'none'
-        }, 2000);
+        // setInterval(() => {
+        //     modal.style.display = 'none'
+        //     message.style.display = 'none'
+        // }, 2000);
     }
     else if (users.some(x => x.email === user.email)) {
         message.innerHTML = "User exists"
@@ -61,10 +61,10 @@ registerForm.addEventListener('submit', (e) => {
         users.push(user)
         message.innerHTML = "User registered successfully"
         message.setAttribute('class', 'text-success')
-        setInterval(() => {
-            modal.style.display = 'none'
-            message.style.display = 'none'
-        }, 2000);
+        // setInterval(() => {
+        //     modal.style.display = 'none'
+        //     message.style.display = 'none'
+        // }, 2000);
     }
 })
 
@@ -89,18 +89,20 @@ signInForm.addEventListener('submit', (e) => {
         if (x.email === email && x.password === password) {
             signInmessage.setAttribute('class', 'text-success')
             signInmessage.innerHTML = "User is logged in."
-            setInterval(() => {
-                signUpBtn.style.display = "none"
-                usersName.style.display = "block";
-                usersName.innerHTML = x.fullname;
-                usersName.setAttribute('class', 'fa fa-user')
-                modal2.style.display = "none"
-            }, 1000);
+            usersName.innerHTML = x.fullname;
+            signUpBtn.style.display = 'none'
+            usersName.style.display = 'block'
+            // setInterval(() => {
+            //     signUpBtn.style.display = "none"
+            //     usersName.style.display = "block";
+            //     usersName.setAttribute('class', 'fa fa-user')
+            //     modal2.style.display = "none"
+            // }, 1000);
         }
         else {
             signInmessage.setAttribute('class', 'text-danger')
             signInmessage.innerHTML = "Wrong password or email."
-        }
+        }   
     }
 })
 
@@ -109,3 +111,49 @@ locationBtn.addEventListener('click', () => {
     modal3.style.display = 'block';
     var setLocationBtn = document.getElementById('setLocation')
 })
+
+const logOutDiv = document.getElementById('logOut')
+usersName.addEventListener('mouseover', () => {
+    logOutDiv.style.display = 'block'
+})
+
+usersName.addEventListener('mouseout', () => {
+    setInterval(() => {
+        logOutDiv.style.display = 'none'
+    }, 4000);
+})
+
+function logOut() {
+    usersName.style.display = 'none';
+    signUpBtn.style.display = 'inline'
+    logOutDiv.style.display = 'none'
+    // console.log('function')
+}
+
+function setLocation() {
+    initMap()
+    console.log(latt)
+}
+
+// Initialize and add the map
+function initMap() {
+
+    var latt; 
+    var long; 
+    navigator.geolocation.getCurrentPosition(position => {
+        latt = position.coords.latitude;
+        long = position.coords.longitude;
+        // The location of Uluru
+    const city = { lat: latt, lng: long };
+    // The map, centered at Uluru
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 4,
+      center: city,
+    });
+    // The marker, positioned at Uluru
+    const marker = new google.maps.Marker({
+      position: city,
+      map: map,
+    });
+    })
+  }

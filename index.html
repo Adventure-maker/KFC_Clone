@@ -20,16 +20,17 @@
 <body>
     <nav>
         <img src="img/logo.png" alt="logo" id="logo">
-        <ul>
+        <ul style="display: block; float: left;">
             <li>
                 <a id="signUp">
                     SIGN UP
                 </a>
             </li>
-            <li id="user">
-                <a id="usersName">
-                    
-                </a>
+            <li>
+                <p id="usersName"></p>
+                <div id="logOut" style="display: none;">
+                    <button class="btn btn-danger mx-4 p-2 border border-dark" id="logOutBtn" onclick="logOut()">Log Out</button>
+                </div>
             </li>
         </ul>
     </nav>
@@ -42,16 +43,19 @@
                 <button class="closeBtn" id="closeBtn1">x</button>
             </header>
             <form class="text-center" id="registerForm">
-                <p class="label">Full name<p>
-                <input type="text" name="fullName" id="fullName" class="inputs" placeholder="Full Name" title="Full Name" required>
-                <br>
-                <br>
+                <p class="label">Full name
+                <p>
+                    <input type="text" name="fullName" id="fullName" class="inputs" placeholder="Full Name"
+                        title="Full Name" required>
+                    <br>
+                    <br>
                 <p class="label"> Email</p>
                 <input type="email" name="email" id="email" class="inputs" placeholder="E-mail" title="E-mail" required>
                 <br>
                 <br>
                 <p class="label">password</p>
-                <input type="password" name="password" id="password" class="inputs" placeholder="Password" title="Password" required>
+                <input type="password" name="password" id="password" class="inputs" placeholder="Password"
+                    title="Password" required>
                 <br>
                 <br>
                 <button type="submit" class="formBtn" id="register">Register</button>
@@ -69,11 +73,13 @@
             </header>
             <form class="text-center" id="signInForm">
                 <p class="label"> Email</p>
-                <input type="email" name="emailInput" id="emailInput" class="inputs" placeholder="E-mail" title="E-mail" required>
+                <input type="email" name="emailInput" id="emailInput" class="inputs" placeholder="E-mail" title="E-mail"
+                    required>
                 <br>
                 <br>
                 <p class="label">password</p>
-                <input type="password" name="passwordInput" id="passwordInput" class="inputs" placeholder="Password" title="Password" required>
+                <input type="password" name="passwordInput" id="passwordInput" class="inputs" placeholder="Password"
+                    title="Password" required>
                 <br>
                 <br>
                 <button type="submit" class="formBtn" id="signInBtn">Sign In</button>
@@ -89,7 +95,7 @@
                 <button class="closeBtn" id=closeBtn3>x</button>
             </header>
             <div class="map-cont" id="map"></div>
-            <button class="btn-secondary border-white pl-5 pr-5 text-white" id="setLocation">Set Location</button>
+            <button class="btn-secondary border-white pl-5 pr-5 text-white" id="setLocation" onclick="setLocation()">Set Location</button>
         </div>
     </div>
 
@@ -278,6 +284,7 @@
     </div>
 
     <script src="main.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3Twab607ifag4S_FyzeJxCE-1PMQ76h8&callback=initMap&libraries=&v=weekly" async></script>
 </body>
 
 </html>
