@@ -33,7 +33,7 @@ nav {
     justify-content: space-between;
 }
 
-nav>ul, li {
+.nav> li {
     list-style: none;
     display: flex;
     align-items: center;
@@ -188,4 +188,107 @@ header>h3 {
 #signInMessage {
     margin-top: 20px;
     font-size: 20px;
+}
+
+#signUpImg {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#offers {
+    width: 80%;
+    margin: auto;
+}
+
+#coupons {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+}
+
+.card {
+    text-align: center;
+}
+
+.card>p {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+.avail {
+    width: 50%;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 20px;
+    height: 30px;
+    background-color: #da0a0a;
+    color: #fff;
+    border-radius: 10px;
+}
+
+.avail:hover {
+    color: #ccc;
+}
+
+#none {
+    height: 30px;
+    width: 100%;
+    margin-top: 30px;
+}
+
+#airtel {
+    margin-top: 20px;
+    text-align: center;
+}
+
+#footer {
+    width: 75%;
+    margin: auto;
+    margin-top: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 5px 2px #ccc;
+}
+
+#about {
+    text-align: center;
+    font-weight: 500;
+}
+
+#links {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 2px solid #706f6f;
+}
+
+#links>ul, li {
+    display: inline;
+    font-weight: 300;
+    font-size: 15px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.download {
+    height: 40px;
+    width: 100px;
+    margin-bottom: 10px;
+}
+
+#social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    margin-bottom: 30px;
+}
+
+#socialImages>img {
+    height: 40px;
+    width: 40px;
+    margin-left: 10px;
 }
