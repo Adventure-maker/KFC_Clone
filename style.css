@@ -7,11 +7,12 @@
 body {
     margin: 0;
     padding: 0;
+    font-family: acme, Arial;
+    user-select: none;
 }
 
 button:focus {
     outline: none;
-    box-shadow: 0 5px 8px 2px #d86161;
 }
 
 a {
@@ -33,7 +34,7 @@ nav {
     justify-content: space-between;
 }
 
-.nav> li {
+.nav>li {
     list-style: none;
     display: flex;
     align-items: center;
@@ -86,7 +87,7 @@ button {
 
 .modal-content {
     background-color: #fff;
-    width: 400px ;
+    width: 400px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -176,7 +177,7 @@ header>h3 {
 
 #usersName {
     display: none;
-    font-size: 3  z0px;
+    font-size: 3 z0px;
     color: #511fa1;
 }
 
@@ -232,10 +233,10 @@ header>h3 {
     color: #ccc;
 }
 
-#none {
+.none {
     height: 30px;
     width: 100%;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 
 #airtel {
@@ -291,4 +292,94 @@ header>h3 {
     height: 40px;
     width: 40px;
     margin-left: 10px;
+}
+
+#modal-content2 {
+    width: 800px;
+    height: 1000px;
+    overflow-y: scroll;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#savedAddress {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+}
+
+#locationName {
+    margin-left: 20px;
+}
+
+#edit {
+    margin-right: 40px;
+}
+
+#newAddressCont {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#deleteAddress:hover {
+    color: #511fa1;
+}
+
+#form {
+    text-align: center;
+}
+
+#placeName {
+    margin-bottom: 20px;
+}
+
+#gift {
+    display: none;
+}
+
+#giftMessage {
+    height: 100px;
+    width: 100%;
+}
+
+.cont {
+    margin-bottom: 30px;
+}
+
+.addressInput {
+    width: 250px;
+}
+
+.payment {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+}
+
+#giftMessageCont {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+#placeOrder {
+    padding: 15px;
+    width: 100%;
+    background-color: #511fa1;
+    color: #fff;
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+#placeOrder:focus {
+    box-shadow: 0 2px 5px 2px #511fa1;
+}
+
+#promoCodeCont {
+    display: none;
+}
+
+#alert-box {
+    display: none;
 }

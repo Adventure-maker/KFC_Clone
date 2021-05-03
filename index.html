@@ -18,23 +18,6 @@
 </head>
 
 <body>
-    <nav>
-        <img src="img/logo.png" alt="logo" id="logo">
-        <ul style="display: block; float: left;" class="nav ">
-            <li>
-                <a id="signUp">
-                    SIGN UP
-                </a>
-            </li>
-            <li>
-                <p id="usersName"></p>
-                <div id="logOut" style="display: none;">
-                    <button class="btn btn-danger mx-4 p-2 border border-dark" id="logOutBtn" onclick="logOut()">Log Out</button>
-                </div>
-            </li>
-        </ul>
-    </nav>
-
     <!-- modal -->
     <div class="modal" id="modal">
         <div class="modal-content">
@@ -95,9 +78,159 @@
                 <button class="closeBtn" id=closeBtn3>x</button>
             </header>
             <div class="map-cont" id="map"></div>
-            <button class="btn-secondary border-white pl-5 pr-5 text-white" id="setLocation" onclick="setLocation()">Set Location</button>
+            <button class="btn-secondary border-white pl-5 pr-5 text-white" id="setLocation" onclick="setLocation()">Set
+                Location</button>
         </div>
     </div>
+
+    <div class="modal" id="modal4">
+        <div class="modal-content" id="modal-content2">
+            <div class="mainFormCont">
+
+                <header>
+                    <h3>Let's Celebrate</h3>
+                    <button class="closeBtn" id=closeBtn4>x</button>
+                </header>
+
+                <div class="check">
+                    <input type="checkbox" name="code" id="code" unchecked>
+                    <label for="code">
+                        I have a promo code
+                    </label>
+                    <div id="promoCodeCont">
+                        <input type="text" name="promoCode" id="promoCode" placeholder="Enter  promo code">
+                        <label for="promoCode"></label>
+                        <button class="btn">Apply</button>
+                    </div>
+                </div>
+
+                <h3>Ship my order to....</h3>
+
+                <div id="savedAddress">
+                    <div id="address">
+                        <input type="radio" name="place" id="place">
+                        <label for="place" class="addressLabel">
+                            1509 Latona St</label>
+                    </div>
+
+                    <div id="locationName">
+                        <p>
+                            Miguel Perez
+                            <br>
+                            1509 Latona St, Philadelphia, PA 19146
+                        </p>
+                        <button class="btn btn-secondary" id="edit">Edit</button>
+                        <a id="deleteAddress">Delete this address</a>
+                    </div>
+
+                </div>
+
+                <div id="newAddressCont">
+                    <div id="Address">
+                        <input type="radio" name="newAddress" id="newAddress">
+                        <label for="newAddress">A new Address name </label>
+                    </div>
+
+                    <div id="form">
+                        <input type="text" name="placeName" id="placeName" placeholder="Enter Name"
+                            class="addressInput">
+                        <div class="cont">
+                            <label for="address1">Street address 1</label>
+                            <br>
+                            <input type="text" name="address1" id="address1" placeholder="Enter Adress"
+                                class="addressInput">
+                        </div>
+
+                        <div class="cont">
+                            <label for="address2">Street address 1</label>
+                            <br>
+                            <input type="text" name="address2" id="address2" placeholder="Enter Adress"
+                                class="addressInput">
+                        </div>
+
+                        <div class="cont">
+                            <label for="zipCode">Street address 1</label>
+                            <br>
+                            <input type="text" name="zipCode" id="zipCode" placeholder="Enter ZIP code"
+                                class="addressInput">
+                        </div>
+
+                        <div class="cont">
+                            <label for="city">Street address 1</label>
+                            <br>
+                            <input type="text" name="city" id="city" placeholder="Enter city" class="addressInput">
+                        </div>
+
+                        <div class="cont">
+                            <label for="state">State</label>
+                            <br>
+                            <select name="state" id="state" class="addressInput">
+                                <option value="1">Select state</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="giftMessageCont">
+                    <div class="giftCheckbox">
+                        <input type="checkbox" name="giftMessageLabel" id="giftMessageLabel">
+                        <label for="giftMessageLabel">I'd like to include a gift message</label>
+                    </div>
+                    <div id="gift">
+                        <label for="giftMessage">Promo Code</label>
+                        <br>
+                        <textarea name="giftMessage" id="giftMessage"></textarea>
+                        <p><span id="count">256</span> characters left!</p>
+                    </div>
+                </div>
+                <div id="paymentMethod">
+                    <div id="payment1" class="payment">
+                        <input type="radio" name="creditCard" id="creditCard">
+                        <label for="creditCard">A New Credit Card
+                            <img src="img/visa.png" alt="">
+                            We accept these credit cards</label>
+                    </div>
+
+                    <div id="payment2" class="payment">
+                        <input type="radio" name="paypal" id="paypal">
+                        <label for="paypal">
+                            PayPal When you click "Place Order", you will be taken to the PayPal website.
+                        </label>
+                    </div>
+
+                </div>
+            </div>
+            <button id="placeOrder">Place Order</button>
+            <div class=" alert alert-success alert-dismissible mt-3 mb-0" id="alert-box">
+                <p>
+                    <strong>Success!</strong>
+                    Your meal is being cooked shortly!
+                </p>
+                <button type="button" class="close" data-dismiss="alert">&times;</button>
+            </div>
+            <div class="none"></div>
+        </div>
+    </div>
+
+
+    <nav>
+        <img src="img/logo.png" alt="logo" id="logo">
+        <ul style="display: block; float: left;" class="nav ">
+            <li>
+                <a id="signUp">
+                    SIGN UP
+                </a>
+            </li>
+            <li>
+                <p id="usersName"></p>
+                <div id="logOut" style="display: none;">
+                    <button class="btn btn-danger mx-4 p-2 border border-dark" id="logOutBtn" onclick="logOut()">Log
+                        Out</button>
+                </div>
+            </li>
+        </ul>
+    </nav>
+
 
     <div class="container-fluid bg-dark p-1 d-flex flex-row text-light mt-0 " id="header">
         <div class="flex-fill w-25  ml-5">
@@ -162,9 +295,9 @@
 
     </div>
 
-<div id="signUpImg">
-    <img src="img/signup.png" alt="">
-</div>
+    <div id="signUpImg">
+        <img src="img/signup.png" alt="">
+    </div>
 
     <div class="items">
         <h1>RECOMMENDED FOR YOU</h1>
@@ -179,7 +312,7 @@
                         <p>
                             $20
                         </p>
-                        <button class="buyBtn">Buy</button>
+                        <button class="buyBtn" onclick="order()">Buy</button>
                     </div>
                 </div>
             </div>
@@ -193,7 +326,7 @@
                         <p>
                             $20
                         </p>
-                        <button class="buyBtn">Buy</button>
+                        <button class="buyBtn" onclick="order()">Buy</button>
                     </div>
                 </div>
             </div>
@@ -207,7 +340,7 @@
                         <p>
                             $20
                         </p>
-                        <button class="buyBtn">Buy</button>
+                        <button class="buyBtn" onclick="order()">Buy</button>
                     </div>
                 </div>
             </div>
@@ -221,7 +354,7 @@
                         <p>
                             $20
                         </p>
-                        <button class="buyBtn">Buy</button>
+                        <button class="buyBtn" onclick="order()">Buy</button>
                     </div>
                 </div>
             </div>
@@ -238,7 +371,7 @@
                         <p>
                             $20
                         </p>
-                        <button class="buyBtn">Buy</button>
+                        <button class="buyBtn" onclick="order()">Buy</button>
                     </div>
                 </div>
             </div>
@@ -252,7 +385,7 @@
                         <p>
                             $20
                         </p>
-                        <button class="buyBtn">Buy</button>
+                        <button class="buyBtn" onclick="order()">Buy</button>
                     </div>
                 </div>
             </div>
@@ -266,7 +399,7 @@
                         <p>
                             $20
                         </p>
-                        <button class="buyBtn">Buy</button>
+                        <button class="buyBtn" onclick="order()">Buy</button>
                     </div>
                 </div>
             </div>
@@ -280,7 +413,7 @@
                         <p>
                             $20
                         </p>
-                        <button class="buyBtn">Buy</button>
+                        <button class="buyBtn" onclick="order()">Buy</button>
                     </div>
                 </div>
             </div>
@@ -292,22 +425,22 @@
             OFFERS
         </h1>
         <div id="coupons">
-            <div class="card">
+            <div class="card mr-3">
                 <img src="img/coupon1.jpg">
                 <p>ADDCHK99</p>
                 <button class="avail">Avail Coupon</button>
             </div>
-            <div class="card">
+            <div class="card mr-3">
                 <img src="img/coupon1.jpg">
                 <p>ADDCHK99</p>
                 <button class="avail">Avail Coupon</button>
             </div>
-            <div class="card">
+            <div class="card mr-3">
                 <img src="img/coupon1.jpg">
                 <p>ADDCHK99</p>
                 <button class="avail">Avail Coupon</button>
             </div>
-            <div class="card">
+            <div class="card mr-3">
                 <img src="img/coupon1.jpg">
                 <p>ADDCHK99</p>
                 <button class="avail">Avail Coupon</button>
@@ -333,7 +466,7 @@
             </ul>
             <div id="images">
                 <img src="img/google.png" style="margin-left: 10px; margin-right: 10px;" class="download">
-            <img src="img/app.png" style="margin-left: 10px; margin-right: 10px;" class="download"> 
+                <img src="img/app.png" style="margin-left: 10px; margin-right: 10px;" class="download">
             </div>
         </div>
         <div id="social">
@@ -349,17 +482,24 @@
         </div>
         <div id="about">
             <p>
-                Food shown are for illustration purpose only. Actual product may differ from the images shown in this website. Our menu prices are now inclusive of GST.* The KFC name, logos, and related marks are trademarks of KFC, Inc. All chicken products contain Monosodium Glutamate. Not recommended for infants below 12 months.
+                Food shown are for illustration purpose only. Actual product may differ from the images shown in
+                this
+                website. Our menu prices are now inclusive of GST.* The KFC name, logos, and related marks are
+                trademarks of KFC, Inc. All chicken products contain Monosodium Glutamate. Not recommended for
+                infants
+                below 12 months.
             </p>
         </div>
     </div>
 
-    <div id="none">
+    <div class="none">
 
     </div>
 
     <script src="main.js"></script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3Twab607ifag4S_FyzeJxCE-1PMQ76h8&callback=initMap&libraries=&v=weekly" async></script>
+    <script
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA3Twab607ifag4S_FyzeJxCE-1PMQ76h8&callback=initMap&libraries=&v=weekly"
+        async></script>
 </body>
 
 </html>
