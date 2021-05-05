@@ -27,8 +27,8 @@ a:hover {
 }
 
 nav {
-    margin-top: 0;
-    padding-right: 40px;
+    margin: 0;
+    padding: 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -63,6 +63,7 @@ button {
 
 #slideshow {
     height: 70%;
+    width: 100%;
 }
 
 .card-header>img {
@@ -165,6 +166,7 @@ header>h3 {
 #setLocation {
     height: 50px;
     border-radius: 20px;
+    margin-top: 10px;
 }
 
 .map-cont {
@@ -206,7 +208,14 @@ header>h3 {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: row;
     margin: auto;
+    margin-bottom: 30px;
+}
+
+.coupons-avaliable {
+    width: 200px;
+    height: 300px;
 }
 
 .card {
@@ -296,7 +305,7 @@ header>h3 {
 
 #modal-content2 {
     width: 800px;
-    height: 1000px;
+    height: 800px;
     overflow-y: scroll;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -370,6 +379,8 @@ header>h3 {
     color: #fff;
     font-size: 20px;
     margin-top: 20px;
+    border-radius: 20px;
+    border: 2px solid #6c45aa;
 }
 
 #placeOrder:focus {
@@ -383,3 +394,25 @@ header>h3 {
 #alert-box {
     display: none;
 }
+
+.active {
+    color: #dd3939;
+}
+
+.collapse {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.items {
+    width: 100%;
+    margin: auto;
+}
+
+.card {
+    width: 100%;
+    height: 400px;
+}
+

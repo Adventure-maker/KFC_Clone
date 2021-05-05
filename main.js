@@ -132,7 +132,6 @@ function logOut() {
 
 function setLocation() {
     initMap()
-    console.log(latt)
 }
 
 // Initialize and add the map
@@ -158,6 +157,27 @@ function initMap() {
     })
 }
 
+
+const linkUl1 = document.getElementById('links1');
+const linkUl2 = document.getElementById('links2');
+
+
+const elem = linkUl1.getElementsByTagName('li')
+
+for (let x of elem) {
+    x.addEventListener('click', e => {
+           x.style.color = '#dd3939'
+    })
+}
+
+const elem2 = linkUl2.getElementsByTagName('li')
+
+for (let x of elem2) {
+    x.addEventListener('click', e => {
+           x.style.color = '#e89898'
+
+    })
+}
 
 
 
@@ -278,4 +298,7 @@ const alert = document.getElementById('alert-box');
 
 placeOrder.addEventListener('click', () => {
     alert.style.display = 'inline';
+    setTimeout(() => {
+        alert.style.display = 'none'
+    }, 4000);
 })
