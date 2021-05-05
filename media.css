@@ -23,6 +23,7 @@
         flex-wrap: wrap;
     }
     .card {
+        margin: auto;
         margin-bottom: 30px;
         width: 300px;
     }
